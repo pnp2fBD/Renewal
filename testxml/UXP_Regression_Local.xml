@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SIAAS_Regression" verbose="3" parallel="tests"
+	thread-count="120">
+	<parameter name="securityTest" value="false" />
+	<parameter name="deviceHost" value="localhost" />
+	<parameter name="devicePort" value="4444" />
+	<parameter name="browserName" value="chrome_windows"></parameter>
+
+	<parameter name="browser" value="chrome"></parameter>
+	<!-- <parameter name="browser_version" value="52"></parameter> -->
+	<parameter name="os" value="Windows"></parameter>
+	<parameter name="os_version" value="10"></parameter>
+	
+	<!-- <test name="UXP_EC_1607" parallel="methods" thread-count = "5"> <classes> 
+		<class name="com.ssp.regression.insurer.testscripts.UXP_EC_1607"> <methods><include 
+		name="TC_212"/></methods> </class> </classes> </test> -->
+
+
+	<test name="UXP_EC_SMOKE" parallel="methods" thread-count="2">
+	<parameter name="env" value="SystemTest"></parameter>
+	<parameter name="webSite"
+		value="http://aldvmstweb02.siriusfs.com/EngagementCentre/"></parameter>
+		<classes>
+			<class name="com.ssp.smoke.testscripts.UXP_EC_SMOKE">
+			</class>
+		</classes>
+	</test>
+
+</suite>

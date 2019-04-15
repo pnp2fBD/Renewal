@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="EC_NCD" verbose="3" parallel="methods">
+	<parameter name="deviceHost" value="localhost" />
+	<parameter name="devicePort" value="4444" />
+	<parameter name="browserName" value="chrome_windows"></parameter>
+	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="browser_version" value="10"></parameter>
+	<parameter name="os" value="Windows"></parameter>
+	<parameter name="os_version" value="10"></parameter>
+	<parameter name="env" value="SIAASST"></parameter>
+	<parameter name="webSite_SS"
+		value="http://aldvmstweb02.siriusfs.com/SIAAS-SelfService/"></parameter>
+	<parameter name="website_EC"
+		value="http://aldvmstweb02.siriusfs.com/EngagementCentre/"></parameter>
+	<parameter name="website_UIRefresh"
+		value="http://aldvmstweb02.siriusfs.com/SIAASSystemTest/UI/SSP/index.htm"></parameter>
+	<parameter name="soapenv"
+		value="http://aldvmstweb02.siriusfs.com/SIAASSystemTest/TechnologyFrameworksWeb"></parameter>
+	<test name="No_Claims_Discount_TestCases_SIAASSystemTest_EngagementCentre" parallel="false"
+		thread-count="1">
+		<classes>
+			<class name="cucumber.stepdefination.runner.TestRunnerNCD">
+			</class>
+		</classes>
+	</test>
+</suite>

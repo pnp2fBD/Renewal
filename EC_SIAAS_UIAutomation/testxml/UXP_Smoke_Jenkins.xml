@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SIAAS_Smoke" verbose="3" parallel="false"
+	thread-count="120">
+	<parameter name="securityTest" value="false" />
+	<parameter name="deviceHost" value="pavithra25" />
+	<parameter name="devicePort" value="JbTsAXGWzVsMbmHVvXYL" />
+	<parameter name="browserName" value="cloud"></parameter>
+
+	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="browser_version" value="52"></parameter>
+	<parameter name="os" value="Windows"></parameter>
+	<parameter name="os_version" value="7"></parameter>
+	<parameter name="env" value="${site}"></parameter>
+	<parameter name="webSite" value="${url}"></parameter>
+
+	 <test name="UXP_EC_SMOKE" parallel="methods" thread-count="30">
+		<classes>
+			<class name="com.ssp.smoke.testscripts.UXP_EC_SMOKE">				
+			</class>
+		</classes>
+	</test>
+</suite>

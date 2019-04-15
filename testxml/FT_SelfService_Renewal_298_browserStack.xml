@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SS_Renewal" verbose="3" parallel="methods">
+	<parameter name="deviceHost" value="varunwadhwa1" />
+	<parameter name="devicePort" value="nsDeqx9gHSWS4uWHiAfj" />
+	<parameter name="browserName" value="cloud"></parameter>
+	<parameter name="browser" value="Safari"></parameter>
+	<parameter name="browser_version" value="6.0"></parameter>
+	<parameter name="os" value="OS X"></parameter>
+	<parameter name="os_version" value="Lion"></parameter>
+	<parameter name="env" value="FT3"></parameter>
+	<parameter name="webSite"
+		value="http://aldvmweb01.siriusfs.com/SIaaS-SSCFT3/servletcontroller"></parameter>
+	<parameter name="website_EC"
+		value="http://aldvmweb01.siriusfs.com/EngagementCentreCoreFT3/"></parameter>
+	<parameter name="website_UIRefresh"
+		value="http://aldvmweb01.siriusfs.com/CoreFT3/UI/SSP/index.htm"></parameter>
+	<parameter name="soapenv"
+		value="http://aldvmstweb02.siriusfs.com/SIAASSystemTest/TechnologyFrameworksWeb"></parameter>
+	<test name="SelfService_FT_SelfServiceRenewal298_FT3" parallel="false"
+		thread-count="1">
+		<classes>
+			<class name="Renewal.TestRunner">
+			</class>
+		</classes>
+	</test>
+</suite>
